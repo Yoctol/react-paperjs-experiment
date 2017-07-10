@@ -1,0 +1,25 @@
+{
+  "name": "react-paperjs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "fbjs": "^0.8.12",
+    "paper-jsdom-canvas": "^0.11.4",
+    "react": "16.0.0-alpha.4",
+    "react-dom": "16.0.0-alpha.4"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-react": "^6.24.1"
+  }
+}
