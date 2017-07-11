@@ -13,7 +13,6 @@ module.exports = {
   },
   Path: {
     Line: 'Path.Line',
-    Rectangle: 'Path.Rectangle',
     Circle: 'Path.Circle',
     Rectangle: 'Path.Rectangle',
     Ellipse: 'Path.Ellipse',
