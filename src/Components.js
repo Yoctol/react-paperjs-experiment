@@ -21,4 +21,5 @@ module.exports = {
     RegularPolygon: 'Path.RegularPolygon',
     Star: 'Path.Star',
   },
+  PointText: 'PointText',
 };

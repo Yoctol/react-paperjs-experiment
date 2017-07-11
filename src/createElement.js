@@ -7,6 +7,7 @@ const {
   Raster,
   Shape,
   Path,
+  PointText,
 } = require('./Components');
 
 function createElement(type, props, root) {
@@ -26,6 +27,9 @@ function createElement(type, props, root) {
     case Path.Rectangle:
       instance = new paper.Path.Rectangle(props.point, props.size);
       instance.strokeColor = props.strokeColor;
+      break;
+    case PointText:
+      instance = new paper.PointText(props);
       break;
     default:
       instance = undefined;
