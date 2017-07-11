@@ -1,17 +1,9 @@
 {
-  "name": "react-paperjs",
-  "version": "1.0.0",
+  "name": "react-paperjs-experiment",
+  "version": "0.0.1-1",
   "description": "",
-  "main": "index.js",
-  "directories": {
-    "example": "examples"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "main": "src/node.js",
+  "license": "MIT",
   "dependencies": {
     "fbjs": "^0.8.12",
     "paper-jsdom-canvas": "^0.11.4",
