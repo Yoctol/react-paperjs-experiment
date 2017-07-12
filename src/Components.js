@@ -21,4 +21,5 @@ module.exports = {
     Star: 'Path.Star',
   },
   PointText: 'PointText',
+  Svg: 'Svg',
 };

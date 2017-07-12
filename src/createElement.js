@@ -8,6 +8,7 @@ const {
   Shape,
   Path,
   PointText,
+  Svg,
 } = require('./Components');
 
 function createElement(type, props, root) {
@@ -65,6 +66,16 @@ function createElement(type, props, root) {
     case PointText:
       instance = new paper.PointText(props);
       break;
+    case Svg: {
+      let resolve;
+      root.__promises__.push(new Promise(_resolve => (resolve = _resolve)));
+      instance = root.project.importSVG(props.svg, {
+        insert: false,
+        onLoad: resolve,
+      });
+      break;
+    }
+
     default:
       instance = undefined;
   }
