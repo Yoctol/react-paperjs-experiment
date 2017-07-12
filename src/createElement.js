@@ -19,10 +19,17 @@ function createElement(type, props, root) {
       scope.settings.insertItems = false;
       scope.setup(props.canvas);
       scope.view.autoUpdate = true;
+      scope.__promises__ = [];
       instance = scope;
       break;
     case Group:
       instance = new paper.Group([]);
+      break;
+    case Raster:
+      instance = new paper.Raster(props);
+      root.__promises__.push(
+        new Promise(resolve => (instance.onLoad = resolve))
+      );
       break;
     case Shape.Circle:
       instance = new paper.Shape.Circle(props);

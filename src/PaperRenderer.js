@@ -45,8 +45,8 @@ const PaperRenderer = ReactFiberReconciler({
     console.log('createTextInstance');
   },
 
-  finalizeInitialChildren(domElement, type, props) {
-    console.log('finalizeInitialChildren');
+  finalizeInitialChildren(instance, type, props) {
+    console.log('finalizeInitialChildren', instance, type, props);
     return false;
   },
 
@@ -58,7 +58,7 @@ const PaperRenderer = ReactFiberReconciler({
     console.log('prepareForCommit');
   },
 
-  prepareUpdate(domElement, type, oldProps, newProps) {
+  prepareUpdate(instance, type, oldProps, newProps) {
     console.log('prepareUpdate');
     return true;
   },
@@ -81,6 +81,10 @@ const PaperRenderer = ReactFiberReconciler({
 
   getChildHostContext() {
     return emptyObject;
+  },
+
+  getPublicInstance(instance) {
+    return instance;
   },
 
   // scheduleAnimationCallback: () => {},

@@ -9,7 +9,9 @@ function renderToPNG(element, canvas, filePath, callback) {
 
   PaperRenderer.updateContainer(element, node, null);
 
-  container.view.exportImage(filePath, callback);
+  Promise.all(container.__promises__).then(() => {
+    container.view.exportImage(filePath, callback);
+  });
 }
 
 function renderToBuffer(element, canvas, callback) {
@@ -18,9 +20,10 @@ function renderToBuffer(element, canvas, callback) {
 
   PaperRenderer.updateContainer(element, node, null);
 
-  const buf = canvas.toBuffer();
-
-  callback(buf);
+  Promise.all(container.__promises__).then(() => {
+    const buf = canvas.toBuffer();
+    callback(buf);
+  });
 }
 
 const ReactPaperNode = {
