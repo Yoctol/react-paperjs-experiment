@@ -1,12 +1,9 @@
 const fs = require('fs');
 
-const paper = require('paper-jsdom-canvas');
-
 const createElement = require('./createElement');
 const PaperRenderer = require('./PaperRenderer');
 
-function renderToPNG(element, filePath, callback) {
-  const canvas = paper.createCanvas(300, 460);
+function renderToPNG(element, canvas, filePath, callback) {
   const container = createElement('PaperScope', { canvas });
   const node = PaperRenderer.createContainer(container);
 
@@ -15,8 +12,7 @@ function renderToPNG(element, filePath, callback) {
   container.view.exportImage(filePath, callback);
 }
 
-function renderToBuffer(element, callback) {
-  const canvas = paper.createCanvas(300, 460);
+function renderToBuffer(element, canvas, callback) {
   const container = createElement('PaperScope', { canvas });
   const node = PaperRenderer.createContainer(container);
 
