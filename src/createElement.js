@@ -73,6 +73,12 @@ function createElement(type, props, root) {
         insert: false,
         onLoad: resolve,
       });
+      if (props.position) {
+        instance.position = new paper.Point(
+          props.position[0],
+          props.position[1]
+        );
+      }
       break;
     }
 
