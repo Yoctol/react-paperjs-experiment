@@ -5,7 +5,6 @@ module.exports = {
   Layer: 'Layer',
   Group: 'Group',
   Raster: 'Raster',
-  Project: 'Project',
   Shape: {
     Circle: 'Shape.Circle',
     Rectangle: 'Shape.Rectangle',
