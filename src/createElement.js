@@ -48,8 +48,7 @@ function createElement(type, props, root) {
       instance = new paper.Path.Circle(props);
       break;
     case Path.Rectangle:
-      instance = new paper.Path.Rectangle(props.point, props.size);
-      instance.strokeColor = props.strokeColor;
+      instance = new paper.Path.Rectangle(props);
       break;
     case Path.Ellipse:
       instance = new paper.Path.Ellipse(props);
