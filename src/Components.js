@@ -1,6 +1,5 @@
 module.exports = {
   PaperScope: 'PaperScope',
-  Project: 'Project',
   Item: 'Item',
   Layer: 'Layer',
   Group: 'Group',

@@ -3,6 +3,7 @@ const paper = require('paper-jsdom-canvas');
 const {
   PaperScope,
   Item,
+  Layer,
   Group,
   Raster,
   Shape,
@@ -23,8 +24,22 @@ function createElement(type, props, root) {
       scope.__promises__ = [];
       instance = scope;
       break;
+    case Item:
+      instance = new paper.Item(props);
+      break;
+    case Layer:
+      instance = new paper.Layer(
+        Object.assign({}, props, {
+          children: [],
+        })
+      );
+      break;
     case Group:
-      instance = new paper.Group([]);
+      instance = new paper.Group(
+        Object.assign({}, props, {
+          children: [],
+        })
+      );
       break;
     case Raster:
       instance = new paper.Raster(props);

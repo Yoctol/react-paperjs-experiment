@@ -47,6 +47,8 @@ renderToPNG(<App />, canvas, __dirname + '/paper.png');
 ### renderToBuffer(element, canvas, callback)
 
 ### Components
+- Item
+- Layer
 - Group
 - Raster
 - Shape.Circle
@@ -61,3 +63,5 @@ renderToPNG(<App />, canvas, __dirname + '/paper.png');
 - Path.Star
 - PointText
 - Svg
+
+[Paper.js official document](http://paperjs.org/reference/global/)
