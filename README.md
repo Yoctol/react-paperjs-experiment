@@ -20,8 +20,8 @@ yarn add react-paperjs-experiment
 const React = require('react');
 const paper = require('paper-jsdom-canvas');
 
-const { Group, PointText, Shape, Path, Raster, Svg } = require('react-paperjs-experiment/lib/Components');
-const { renderToPNG } = require('react-paperjs-experiment');
+const { Group, PointText, Shape, Path, Raster, Svg } = require('react-paperjs-experiment');
+const { renderToPNG } = require('react-paperjs-experiment/node');
 
 const svg =
   '<svg width="100" height="100"><circle cx="220" cy="250" r="40" stroke="green" stroke-width="4" /></svg>';
@@ -40,11 +40,48 @@ const canvas = paper.createCanvas(300, 300);
 renderToPNG(<App />, canvas, __dirname + '/paper.png');
 ```
 
+See the basic example at [examples](./examples) folder.
+
 ## API
 
 ### renderToPNG(element, canvas, path, callback)
 
+```jsx
+const React = require('react');
+const paper = require('paper-jsdom-canvas');
+const { Group, Path } = require('react-paperjs-experiment');
+const { renderToPNG } = require('react-paperjs-experiment/node');
+
+const canvas = paper.createCanvas(300, 300);
+
+renderToPNG(
+  <Group>
+    <Path.Rectangle point={[0, 35]} size={[300, 265]} strokeColor="black" />
+  </Group>,
+  canvas,
+  __dirname + '/paper.png',
+  () => { console.log('done'); }
+)
+```
+
 ### renderToBuffer(element, canvas, callback)
+
+```jsx
+const React = require('react');
+const paper = require('paper-jsdom-canvas');
+const { Group, Path } = require('react-paperjs-experiment');
+const { renderToBuffer } = require('react-paperjs-experiment/node');
+
+const canvas = paper.createCanvas(300, 300);
+
+renderToPNG(
+  <Group>
+    <Path.Rectangle point={[0, 35]} size={[300, 265]} strokeColor="black" />
+  </Group>,
+  canvas,
+  buffer => { console.log(buffer); }
+)
+```
 
 ### Components
 - Item

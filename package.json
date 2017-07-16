@@ -2,7 +2,7 @@
   "name": "react-paperjs-experiment",
   "version": "0.0.2",
   "description": "",
-  "main": "src/node.js",
+  "main": "src/index.js",
   "license": "MIT",
   "dependencies": {
     "fbjs": "^0.8.12",
