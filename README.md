@@ -47,6 +47,8 @@ renderToPNG(<App />, canvas, __dirname + '/paper.png');
 ### renderToBuffer(element, canvas, callback)
 
 ### Components
+- Item
+- Layer
 - Group
 - Raster
 - Shape.Circle
