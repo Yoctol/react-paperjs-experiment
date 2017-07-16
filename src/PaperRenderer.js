@@ -8,7 +8,6 @@ const createElement = require('./createElement');
 
 const PaperRenderer = ReactFiberReconciler({
   appendChild(parentInstance, child) {
-    console.log('appendChild');
     if (
       parentInstance instanceof paper.PaperScope &&
       child instanceof paper.Item
@@ -18,61 +17,57 @@ const PaperRenderer = ReactFiberReconciler({
   },
 
   appendInitialChild(parentInstance, child) {
-    console.log('appendInitialChild');
     if (parentInstance instanceof paper.Group && child instanceof paper.Item) {
       parentInstance.addChild(child);
     }
   },
 
   commitTextUpdate(textInstance, oldText, newText) {
-    console.log('commitTextUpdate');
+    // noop
   },
 
   commitMount(instance, type, newProps) {
-    console.log('commitMount');
+    // TODO
   },
 
   commitUpdate(instance, updatePayload, type, oldProps, newProps, root) {
-    console.log('commitUpdate');
+    // TODO
   },
 
   createInstance(type, props, root) {
-    console.log('createInstance', type, props);
     return createElement(type, props, root);
   },
 
   createTextInstance(text, rootContainerInstance, root) {
-    console.log('createTextInstance');
+    // noop
   },
 
   finalizeInitialChildren(instance, type, props) {
-    console.log('finalizeInitialChildren', instance, type, props);
     return false;
   },
 
   insertBefore(parentInstance, child, beforeChild) {
-    console.log('insertBefore');
+    // TODO
   },
 
   prepareForCommit() {
-    console.log('prepareForCommit');
+    // noop
   },
 
   prepareUpdate(instance, type, oldProps, newProps) {
-    console.log('prepareUpdate');
     return true;
   },
 
   removeChild(parentInstance, child) {
-    console.log('removeChild');
+    // TODO
   },
 
   resetAfterCommit() {
-    console.log('resetAfterCommit');
+    // noop
   },
 
   resetTextContent(domElement) {
-    console.log('resetTextContent');
+    // noop
   },
 
   getRootHostContext() {
