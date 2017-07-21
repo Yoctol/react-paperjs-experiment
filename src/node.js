@@ -21,8 +21,9 @@ function renderToBuffer(element, canvas, callback) {
   PaperRenderer.updateContainer(element, node, null);
 
   Promise.all(container.__promises__).then(() => {
+    container.view.update();
     const buf = canvas.toBuffer();
-    callback(buf);
+    callback(null, buf);
   });
 }
 
