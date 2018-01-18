@@ -1,3 +1,5 @@
+'use strict';
+
 const paper = require('paper-jsdom-canvas');
 
 const {
