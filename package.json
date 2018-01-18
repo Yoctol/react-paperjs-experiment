@@ -6,7 +6,7 @@
   "license": "MIT",
   "dependencies": {
     "fbjs": "^0.8.12",
-    "paper-jsdom-canvas": "^0.11.4",
+    "paper-jsdom-canvas": "^0.11.5",
     "react": "16.0.0-alpha.4",
     "react-dom": "16.0.0-alpha.4"
   },

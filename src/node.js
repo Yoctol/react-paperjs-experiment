@@ -10,6 +10,9 @@ function renderToPNG(element, canvas, filePath, callback) {
   PaperRenderer.updateContainer(element, node, null);
 
   Promise.all(container.__promises__).then(() => {
+    // Clear those promises
+    container.__promises__.length = 0;
+
     container.view.exportImage(filePath, callback);
   });
 }
@@ -21,6 +24,9 @@ function renderToBuffer(element, canvas, callback) {
   PaperRenderer.updateContainer(element, node, null);
 
   Promise.all(container.__promises__).then(() => {
+    // Clear those promises
+    container.__promises__.length = 0;
+
     container.view.update();
     const buf = canvas.toBuffer();
     callback(null, buf);

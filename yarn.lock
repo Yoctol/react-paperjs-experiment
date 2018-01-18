@@ -1169,18 +1169,18 @@ output-file-sync@^1.1.0:
     mkdirp "^0.5.1"
     object-assign "^4.1.0"
 
-paper-jsdom-canvas@^0.11.4:
-  version "0.11.4"
-  resolved "https://registry.yarnpkg.com/paper-jsdom-canvas/-/paper-jsdom-canvas-0.11.4.tgz#0661fd13d80d33de00ac89b50883340408cbb047"
+paper-jsdom-canvas@^0.11.5:
+  version "0.11.5"
+  resolved "https://registry.yarnpkg.com/paper-jsdom-canvas/-/paper-jsdom-canvas-0.11.5.tgz#4e672a0a6709ee377897b91b1df16136750b4a76"
   dependencies:
     canvas "^1.3.5"
     jsdom "^9.4.0"
-    paper "0.11.4"
+    paper "0.11.5"
     source-map-support "^0.4.0"
 
-paper@0.11.4:
-  version "0.11.4"
-  resolved "https://registry.yarnpkg.com/paper/-/paper-0.11.4.tgz#4ed9588f57f45afa85020f398b29a98c5f856f5d"
+paper@0.11.5:
+  version "0.11.5"
+  resolved "https://registry.yarnpkg.com/paper/-/paper-0.11.5.tgz#d662de67bce8218c287bfe17586d099d2cc48040"
 
 parse-css-font@^2.0.2:
   version "2.0.2"
