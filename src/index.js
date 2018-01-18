@@ -1,3 +1,5 @@
+'use strict';
+
 const Components = require('./Components');
 const PaperRenderer = require('./PaperRenderer');
 

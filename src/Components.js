@@ -1,3 +1,5 @@
+'use strict';
+
 module.exports = {
   PaperScope: 'PaperScope',
   Item: 'Item',
